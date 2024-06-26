@@ -40,8 +40,6 @@ const goPreview = (id) => {
 		url:"/pages/preview/preview?id="+id
 	})	
 }
-
-
 //分享给好友
 onShareAppMessage((e) => {
 	return {
@@ -49,7 +47,6 @@ onShareAppMessage((e) => {
 		path:"/pages/classify/classify"
 	}
 })
-
 //分享朋友圈
 onShareTimeline(() => {
 	return {
@@ -60,6 +57,10 @@ onShareTimeline(() => {
 
 <template>
 	<view class="homeLayout">
+		<!-- #ifndef MP-TOUTIAO -->
+		<!-- <custom-nav-bar title="推荐"></custom-nav-bar> -->
+		<!-- #endif -->
+				
 		<view class="banner">
 			<swiper circular indicator-dots indicator-color="rgba(255,255,255,0.5)" 
 			indicator-active-color="#fff" autoplay>
